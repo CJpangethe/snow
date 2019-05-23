@@ -1,0 +1,546 @@
+$dark-gray: #5f5f5f
+$blacker: #171717
+$font-worksans: 'Work Sans', sans-serif
+$font-playfair: 'Playfair Display', serif
+
+
+body
+    font-family: $font-worksans
+    font-size: 15px
+    color: $dark-gray
+    margin: 0
+    line-height: 1.6
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+
+h1, h2, h3, h4, h5, h6
+    margin: 0
+
+a
+    color: inherit
+
+textarea,
+input,
+button
+    font-family: inherit
+    font-size: inherit 
+    color: inherit
+    resize: none
+
+    &::placeholder
+        font-size: 14px
+
+    &:focus
+        box-shadow: 0 0 5px rgba(0,0,0,.15)
+        outline: none
+
+// Container
+.container
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 15px
+
+// Header
+.header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
+    height: 100px
+
+.header__logo
+    width: 83px
+
+.header
+    color: #fff
+
+.header__inner
+    display: flex
+    justify-content: space-between
+    padding: 40px 0
+    align-items: center
+
+// Nav
+.nav__link
+    text-decoration: none
+    margin-left: 50px
+    opacity: .7
+    transition: opacity .1s linear
+    text-transform: uppercase
+
+    &:first-child
+        margin-left: 0
+
+    &:hover
+        opacity: 1
+
+// Intro
+.intro__bg
+    background: #49413c url(../img/intro/bg-intro.jpg) center no-repeat
+    background-size: cover
+    background-color: $dark-gray
+    width: 100%
+    height: 100vh
+    
+.intro
+    background-color: rgba(12, 12, 12, 0.6)
+    width: 100%
+    height: 100%
+    color: #fff
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+
+.intro__suptitle
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 3px
+    margin-bottom: 15px
+
+.intro__title
+    font-family: $font-playfair
+    font-size: 48px
+    font-weight: 700
+    letter-spacing: 2px
+
+.intro__subtitle
+    font-style: italic
+    font-size: 48px
+    font-weight: normal
+
+
+// button
+.btn
+    border: 0
+    cursor: pointer
+    background-color: #212121
+    padding: 15px 30px
+    text-transform: uppercase
+    text-decoration: none
+    font-weight: 500
+    transition: background .1s linear
+    border-radius: 3px
+
+    &:hover
+        background-color: #2c2c2c
+
+.intro__btn
+    display: block
+    width: 220px
+    text-align: center
+    margin: 50px auto 0
+
+// Section
+.section
+    padding: 85px 0
+    color: $dark-gray
+    background-color: #f6f6f6
+
+.section--border-top
+    border-top: 1px solid #e5e5e5
+
+.section__header
+    text-align: center
+    width: 100%
+    max-width: 750px
+    margin: 0 auto
+    margin-bottom: 40px
+
+.section__title
+    font-size: 38px
+    margin-bottom: 25px
+    font-family: $font-playfair
+    color: $blacker
+
+.section--dark
+    background: #1d1d1d url(../img/statistics/bg-pattern.jpg) center no-repeat
+    background-size: cover
+    color: #000
+    padding-top: 110px
+
+.sign
+    display: block
+    width: 222px
+    margin: 0 auto
+
+// Statistics
+.statistics
+    display: flex
+    justify-content: space-between
+    color: #fff
+    flex-wrap: wrap
+
+.stat__item
+    width: 25%
+    display: flex
+    align-items: center
+
+.stat__info
+    margin-left: 25px
+
+.stat__number
+    font-size: 18px
+
+.stat__text
+    font-size: 14px
+    text-transform: uppercase
+
+
+// Projects
+.projects
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.project__item
+    width: 32%
+    height: 300px
+    margin-bottom: 20px
+    background-color: rgba(63,94,251,.6)
+    content: ""
+    transition: all .1s linear
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    color: #fff
+
+    &:hover
+        background-color: rgba(238,174,202,.6)
+
+        .project__title
+            display: block
+
+        .project__text
+            display: block
+
+    .project__title
+        font-size: 24px
+        font-family: $font-playfair
+        display: none
+
+    .project__text
+        text-transform: uppercase
+        font-size: 14px
+        font-weight: medium
+        display: none
+
+
+// Review
+.review__item
+    text-align: center
+    color: #fff
+    width: 720px
+    margin: 0 auto
+
+    .review__text
+        font-size: 24px
+        font-family: $font-playfair
+        font-style: italic
+
+    .review__author
+        text-transform: uppercase
+        font-size: 14px
+        font-weight: medium
+        margin-top: 30px
+
+// Partners
+.partners
+    width: 100%
+    padding: 60px 10%
+
+.partners__item
+    margin-right: 50px
+    max-width: 100%
+
+.partners__box
+    padding: 10px
+    width: 120px
+    height: 120px
+
+// Blog
+
+.blog__item
+    background-color: #fff
+    box-shadow: 0 0 20px rgba(0,0,0,.15)
+    margin: 40px 0
+
+.blog__img
+    position: relative
+
+    .blog__img-text
+        position: absolute
+        bottom: 10px
+        left: 10px
+        z-index: 1
+        width: 90px
+        height: 30px
+        background-color: #252525
+        text-transform: uppercase
+        color: #fff
+        text-align: center
+        font-size: 12px
+        padding: 6px 0
+        font-weight: 500
+
+.blog__info
+    padding: 20px 23px
+
+    .blog__title
+        font-family: $font-playfair
+        font-size: 20px
+        color: $blacker
+        margin-bottom: 12px
+        font-weight: bold
+
+        a
+            text-decoration: none
+
+            &:hover
+                text-decoration: underline
+
+    .blog__date
+        text-transform: uppercase
+        font-size: 12px
+        color: $blacker
+        margin-bottom: 12px
+        font-weight: 500
+    
+    .blog__text
+        color: #5f5f5f
+        line-height: 1.4
+
+// Contact
+.contact
+    display: flex
+    justify-content: space-between
+
+.contact__info
+    width: 43%
+    max-width: 500px
+
+.contact__title
+    font-size: 38px
+    font-weight: bold
+    margin-bottom: 30px
+    color: $blacker
+    font-family: $font-playfair
+
+.contact__text
+    margin-bottom: 30px
+
+.contact__line
+    margin-bottom: 15px
+
+    a
+        text-decoration: none
+
+        &:hover
+            text-decoration: underline
+
+    span
+        font-weight: 500
+        color: $blacker
+        margin-right: 10px
+
+.form__input
+    padding: 17px
+    border: 0
+
+.form__upper
+    display: flex
+    justify-content: space-between
+
+.form__input-half
+    max-width: 48%
+
+.contact__form
+    width: 53%
+
+    input
+        width: 100%
+        margin-bottom: 25px
+
+    textarea
+        width: 100%
+
+.btn__form
+    color: #fff
+    margin-top: 25px
+
+// Footer
+.footer
+    background-color: #0c0c0c
+    padding: 85px 0 130px 0
+    color: #e9e9e9
+    position: relative
+
+.footer__inner
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.footer__item
+    width: 33%
+    max-width: 400px
+    padding-right: 20px
+
+.footer__title 
+    font-size: 20px
+    font-family: $font-playfair
+    margin-bottom: 30px
+    font-weight: bold
+
+.footer__text
+    font-family: $font-playfair
+    margin-bottom: 30px
+
+.footer__links
+    font-size: 20px
+
+.social__link
+    margin-right: 8px
+    transition: opacity .1s linear
+
+    &:hover
+        opacity: .6
+
+.footer__tweets
+    padding-left: 25px
+
+.tweets__item
+    margin-bottom: 20px
+    list-style-image: url(../img/twitter-i.png)
+    align-items: center
+
+.instagram
+    display: flex
+    flex-wrap: wrap
+
+    img
+        margin: 3px
+
+    a
+        line-height: 0
+
+.copyright
+    text-align: center
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 25px 0
+    border-top: 1px solid #252525
+
+
+@media (max-width: 990px)
+    .intro__title
+        font-size: 36px
+    .intro__suptitle
+        margin-bottom: 0
+    .intro__subtitle
+        font-size: 36px
+
+    .blog
+        width: 80%
+        margin: 0 auto
+
+    .project__item
+        height: 250px
+
+@media (max-width: 770px)
+    .blog
+        width: 90%
+
+    .intro__title
+        font-size: 28px
+    .intro__subtitle
+        font-size: 28px
+
+    .section
+        padding: 40px 10px
+
+    .section--dark
+        padding-top: 30px
+
+    .stat__item
+        width: 50%
+        margin-bottom: 20px
+
+    .project__item
+        height: 190px
+        margin-bottom: 10px
+
+    .review__item
+        width: 100%
+    
+    .contact
+        display: block
+
+    .contact__info
+        width: 90%
+
+    .contact__form
+        width: 100%
+        margin-top: 40px
+
+    .footer__item
+        width: 50%
+
+        &:last-child
+            display: none
+
+@media (max-width: 550px)
+    .project__item
+        width: 49%
+        height: 190px
+
+    .project__item:last-child
+        display: none
+
+    .review__item
+        .review__text
+            font-size: 16px
+
+    .section__title
+        font-size: 28px
+        margin-bottom: 10px
+    .contact__title
+        font-size: 28px
+        margin-bottom: 10px
+
+    .footer__item-middle
+        display: none
+
+    .footer__item
+        width: 100%
+        text-align: center
+        margin: 0 auto
+        padding-right: 0
+
+    .nav__link
+        display: none
+
+    .header__logo
+        margin: 0 auto
+
+    .contact__text,
+    .contact__line
+        font-size: 13px
+
+@media (max-width: 375px)
+    .intro__suptitle
+        margin-bottom: 20px
+
+    .stat__item
+        width: 100%
+
+    .project__item
+        height: 120px
