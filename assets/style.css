@@ -651,6 +651,10 @@ button:focus {
     width: 49%;
     height: 190px;
   }
+  
+  .intro__bg {
+    height: 600px
+  }
   .project__item:last-child {
     display: none;
   }
